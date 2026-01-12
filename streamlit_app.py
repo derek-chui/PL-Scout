@@ -388,3 +388,8 @@ with right:
 
     with tabs[3]:
         st.json({k: (None if (pd.isna(v) if isinstance(v, float) else False) else v) for k, v in row.to_dict().items()})
+
+st.markdown(
+    'Feel free to reach out for feedback: thatderekchui@gmail.com or <a href="https://derekchui.com" target="_blank">derekchui.com</a>',
+    unsafe_allow_html=True,
+)
