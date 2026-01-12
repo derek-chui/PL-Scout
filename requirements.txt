@@ -1,1 +1,8 @@
 streamlit
+pandas
+openpyxl
+requests
+understatapi
+matplotlib
+numpy
+pillow
