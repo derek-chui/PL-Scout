@@ -108,18 +108,6 @@ def build_radial_figure(labels, vals_0_1, colors, group_bounds):
     fig.tight_layout(pad=1.0)
     return fig
 
-
-
-st.markdown(
-    """
-    <style>
-    .block-container {padding-top: 2.2rem; padding-bottom: 2.0rem;}
-    [data-testid="stSidebar"] {background: linear-gradient(180deg, rgba(7,20,33,1) 0%, rgba(6,18,30,1) 100%);} 
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-
 if wordmark_path.exists():
     c1, c2, c3 = st.columns([1, 2, 1])
     with c2:
