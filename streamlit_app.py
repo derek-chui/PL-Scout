@@ -15,15 +15,9 @@ from datetime import date
 today = date.today()
 SEASON = str(today.year if today.month >= 7 else today.year - 1)
 
-assets_dir = Path("assets")
-icon_path = assets_dir / "matchday_icon.png"
-wordmark_path = assets_dir / "matchday_wordmark.png"
+page_icon = "⚽"
 
-page_icon = None
-if icon_path.exists():
-    page_icon = Image.open(icon_path)
-
-st.set_page_config(page_title="Matchday PL Scout", page_icon=page_icon, layout="wide")
+st.set_page_config(page_title="PL Scout", page_icon=page_icon, layout="wide")
 
 
 AX_BG = "#071421"
@@ -108,12 +102,9 @@ def build_radial_figure(labels, vals_0_1, colors, group_bounds):
     fig.tight_layout(pad=1.0)
     return fig
 
-if wordmark_path.exists():
-    c1, c2, c3 = st.columns([1, 2, 1])
-    with c2:
-        st.image(str(wordmark_path), use_container_width=True)
+st.title("Premier League Scouting")
 
-st.caption("Premier League scouting dashboard powered by FPL + Understat")
+st.caption("Dashboard powered by FPL + Understat")
 
 
 data_dir = Path("data")
